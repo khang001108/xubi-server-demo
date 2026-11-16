@@ -1,0 +1,11 @@
+
+services:
+  xubi-demo:
+    image: hashicorp/http-echo:1.0
+    container_name: xubi-demo
+    command:
+      - "-listen=:5678"
+      - "-text=XUBI SERVER ONLINE"
+    ports:
+      - "18081:5678"
+    restart: unless-stopped
